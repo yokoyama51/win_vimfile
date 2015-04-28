@@ -11,12 +11,31 @@ set nowrap
 set cursorline
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 
+" 改行コードは\l
+set fileformat=unix
 
+
+" タブを表示するときの幅
+set tabstop=4
+
+" タブを挿入するときの幅
+set shiftwidth=4
+" タブをタブとして扱う(スペースに展開しない)
+set noexpandtab
+set softtabstop=0
+
+" ファイルエンコーディング
+set fenc=euc-jp
+
+
+" ヤンクでクリップボードにコピーする
+set clipboard+=unnamed
 
 
 " .swp & ~ ファイルの作成ディレクトリの指定
-:set directory=~/.vim/tmp
-:set backupdir=~/.vim/tmp
+set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
+set undodir=~/.vim/tmp
 
 """"""""""""""""""""""""""""""""""""""""""""
 " 以降はneobundleでのプラグイン管理
