@@ -10,6 +10,17 @@ colorscheme desert
 set cursorline
 highlight CursorLine gui=underline guifg=NONE guibg=NONE
 
+
+
+"""""""""""""""""""""""""""""""""""""""""
+"" ウィンドウ設定
+"""""""""""""""""""""""""""""""""""""""""
+" ウインドウの幅
+set columns=140
+
+" ウインドウの高さ
+set lines=30
+
 " 半透明化
 autocmd GUIEnter * set transparency=240
 
