@@ -15,14 +15,12 @@ highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 set fileformat=unix
 
 
-" タブを表示するときの幅
-set tabstop=4
+" タブ表示幅、タブをスペースに変換する
+set tabstop=2
+set autoindent
+set expandtab
+set shiftwidth=2
 
-" タブを挿入するときの幅
-set shiftwidth=4
-" タブをタブとして扱う(スペースに展開しない)
-set noexpandtab
-set softtabstop=0
 
 " ファイルエンコーディング
 set fenc=euc-jp
@@ -61,6 +59,9 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'Shougo/neocomplcache'
+
+" タグ読み込み
+NeoBundle 'soramugi/auto-ctags.vim'
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
