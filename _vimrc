@@ -14,6 +14,9 @@ highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 " 改行コードは\l
 set fileformat=unix
 
+" textwidthで自動改行させない
+set formatoptions=q
+
 
 " タブ表示幅、タブをスペースに変換する
 set tabstop=2
