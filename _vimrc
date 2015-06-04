@@ -66,6 +66,9 @@ NeoBundle 'Shougo/neocomplcache'
 " タグ読み込み
 NeoBundle 'soramugi/auto-ctags.vim'
 
+
+NeoBundle 'tmhedberg/matchit'
+
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
 
