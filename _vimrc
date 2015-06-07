@@ -14,6 +14,9 @@ highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 " 改行コードは\l
 set fileformat=unix
 
+" textwidthで自動改行させない
+set formatoptions=q
+
 
 " タブ表示幅、タブをスペースに変換する
 set tabstop=2
@@ -66,6 +69,7 @@ NeoBundle 'soramugi/auto-ctags.vim'
 
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'tmhedberg/matchit'
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
 filetype plugin indent on
