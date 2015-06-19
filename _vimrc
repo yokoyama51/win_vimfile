@@ -68,7 +68,7 @@ NeoBundle 'soramugi/auto-ctags.vim'
 
 
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'kana/vim-textobj-entire'
+"NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'tmhedberg/matchit'
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
