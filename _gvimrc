@@ -1,7 +1,7 @@
 
 
 " フォント
-set guifont=MigMIX_1M:h12
+set guifont=MigMIX_1M:h10
 
 " カラー設定
 colorscheme desert
