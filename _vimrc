@@ -14,8 +14,6 @@ highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 " 改行コードは\l
 set fileformat=unix
 
-" textwidthで自動改行させない
-set formatoptions=q
 
 
 " タブ表示幅、タブをスペースに変換する
@@ -37,6 +35,15 @@ set clipboard+=unnamed
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
 set undodir=~/.vim/tmp
+
+
+" [gs] カーソル下のファイルを垂直分割で展開する
+nnoremap gs :vertical wincmd f<CR>
+
+" textwidthで自動改行させない
+set textwidth=0 
+set formatoptions=q
+autocmd FileType text setlocal textwidth=0
 
 """"""""""""""""""""""""""""""""""""""""""""
 " 以降はneobundleでのプラグイン管理
@@ -65,10 +72,11 @@ NeoBundle 'Shougo/neocomplcache'
 
 " タグ読み込み
 NeoBundle 'soramugi/auto-ctags.vim'
+NeoBundle 'majutsushi/tagbar'
 
 
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'kana/vim-textobj-entire'
+"NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'tmhedberg/matchit'
 
 " 読み込んだプラグインも含め、ファイルタイプの検出、ファイルタイプ別プラグイン/インデントを有効化する
