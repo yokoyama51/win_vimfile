@@ -1,86 +1,94 @@
 
 
 
-" s”Ô† ON
+" ¹ÔÈÖ¹æ ON
 set number
 
-" ƒEƒBƒ“ƒhƒE’[‚Å‰üs‚µ‚È‚¢
+" ¥¦¥£¥ó¥É¥¦Ã¼¤Ç²ş¹Ô¤·¤Ê¤¤
 set nowrap
 
-" ƒJƒŒƒ“ƒgs‚É‰ºü‚ğˆø‚­
+" ¥«¥ì¥ó¥È¹Ô¤Ë²¼Àş¤ò°ú¤¯
 set cursorline
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 
-" ‰üsƒR[ƒh‚Í\l
+" ²ş¹Ô¥³¡¼¥É¤Ï\l
 set fileformat=unix
 
 
 
-" ƒ^ƒu•\¦•Aƒ^ƒu‚ğƒXƒy[ƒX‚É•ÏŠ·‚·‚é
+" ¥¿¥ÖÉ½¼¨Éı¡¢¥¿¥Ö¤ò¥¹¥Ú¡¼¥¹¤ËÊÑ´¹¤¹¤ë
 set tabstop=2
 set autoindent
 set expandtab
 set shiftwidth=2
 
 
-" ƒtƒ@ƒCƒ‹ƒGƒ“ƒR[ƒfƒBƒ“ƒO
+" ¥Õ¥¡¥¤¥ë¥¨¥ó¥³¡¼¥Ç¥£¥ó¥°
 set fenc=euc-jp
 
 
-" ƒ„ƒ“ƒN‚ÅƒNƒŠƒbƒvƒ{[ƒh‚ÉƒRƒs[‚·‚é
+" ¥ä¥ó¥¯¤Ç¥¯¥ê¥Ã¥×¥Ü¡¼¥É¤Ë¥³¥Ô¡¼¤¹¤ë
 set clipboard+=unnamed
 
 
-" .swp & ~ ƒtƒ@ƒCƒ‹‚Ìì¬ƒfƒBƒŒƒNƒgƒŠ‚Ìw’è
+" .swp & ~ ¥Õ¥¡¥¤¥ë¤ÎºîÀ®¥Ç¥£¥ì¥¯¥È¥ê¤Î»ØÄê
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
 set undodir=~/.vim/tmp
 
 
-" [gs] ƒJ[ƒ\ƒ‹‰º‚Ìƒtƒ@ƒCƒ‹‚ğ‚’¼•ªŠ„‚Å“WŠJ‚·‚é
+" [gs] ¥«¡¼¥½¥ë²¼¤Î¥Õ¥¡¥¤¥ë¤ò¿âÄ¾Ê¬³ä¤ÇÅ¸³«¤¹¤ë
 nnoremap gs :vertical wincmd f<CR>
 
-" textwidth‚Å©“®‰üs‚³‚¹‚È‚¢
+" textwidth¤Ç¼«Æ°²ş¹Ô¤µ¤»¤Ê¤¤
 set textwidth=0 
 set formatoptions=q
 autocmd FileType text setlocal textwidth=0
 
+
 """"""""""""""""""""""""""""""""""""""""""""
-" ˆÈ~‚Íneobundle‚Å‚Ìƒvƒ‰ƒOƒCƒ“ŠÇ—
+" °Ê¹ß¤Ïneobundle¤Ç¤Î¥×¥é¥°¥¤¥ó´ÉÍı
 """"""""""""""""""""""""""""""""""""""""""""
 
-" vim‹N“®‚Ì‚İruntimepath‚Éneobundle.vim‚ğ’Ç‰Á
+" vimµ¯Æ°»ş¤Î¤ßruntimepath¤Ëneobundle.vim¤òÄÉ²Ã
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-" neobundle.vim‚Ì‰Šú‰» 
-" NeoBundle‚ğXV‚·‚é‚½‚ß‚Ìİ’è
+" neobundle.vim¤Î½é´ü²½ 
+" NeoBundle¤ò¹¹¿·¤¹¤ë¤¿¤á¤ÎÀßÄê
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
 
-" “Ç‚İ‚Şƒvƒ‰ƒOƒCƒ“‚ğ‹LÚ
+" ÆÉ¤ß¹ş¤à¥×¥é¥°¥¤¥ó¤òµ­ºÜ
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite-build'
+NeoBundle 'Shougo/vimshell.vim'
+
+
 NeoBundle 'itchyny/lightline.vim'
 
-"insert here your Neobundle plugins"
+" ¥Õ¥¡¥¤¥ë¥¨¥¯¥¹¥×¥í¡¼¥é¡¼
 NeoBundle 'scrooloose/nerdtree'
 
-NeoBundle 'Shougo/neocomplcache'
 
-" ƒ^ƒO“Ç‚İ‚İ
+" ¥¿¥°ÆÉ¤ß¹ş¤ß
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'majutsushi/tagbar'
 
 
+" \¥­¡¼¤Ç¥³¥á¥ó¥È²½
 NeoBundle 'tpope/vim-commentary'
-"NeoBundle 'kana/vim-textobj-entire'
+
 NeoBundle 'tmhedberg/matchit'
 
-" “Ç‚İ‚ñ‚¾ƒvƒ‰ƒOƒCƒ“‚àŠÜ‚ßAƒtƒ@ƒCƒ‹ƒ^ƒCƒv‚ÌŒŸoAƒtƒ@ƒCƒ‹ƒ^ƒCƒv•Êƒvƒ‰ƒOƒCƒ“/ƒCƒ“ƒfƒ“ƒg‚ğ—LŒø‰»‚·‚é
+
+" ÆÉ¤ß¹ş¤ó¤À¥×¥é¥°¥¤¥ó¤â´Ş¤á¡¢¥Õ¥¡¥¤¥ë¥¿¥¤¥×¤Î¸¡½Ğ¡¢¥Õ¥¡¥¤¥ë¥¿¥¤¥×ÊÌ¥×¥é¥°¥¤¥ó/¥¤¥ó¥Ç¥ó¥È¤òÍ­¸ú²½¤¹¤ë
 filetype plugin indent on
 
-" ƒCƒ“ƒXƒg[ƒ‹‚Ìƒ`ƒFƒbƒN
+" ¥¤¥ó¥¹¥È¡¼¥ë¤Î¥Á¥§¥Ã¥¯
 NeoBundleCheck
